@@ -1,0 +1,101 @@
+/* tag selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* everything selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* class selector */
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* #id selector */
+#signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* tag selector */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* attribute selector */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* child selector */
+.signup-container > p {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* hover effect */
+a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+/* nth-child */
+.input-group:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+/* :not pseudo-class */
+input:not([type="submit"]) {
+    background-color: #f9f9f9;
+}
+
+/* :is pseudo-class */
+:is(h1, h2, h3) {
+    color: #333;
+}
+
+/* :has pseudo-class */
+form:has(input[type="password"]) {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
