@@ -1,101 +1,123 @@
-/* tag selector */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+/* latin-ext */
+@font-face {
+    font-family: 'Urbanist';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/urbanist/v15/L0x4DF02iFML4hGCyMqgXSFsjlC0V7q7Ag.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Urbanist';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/urbanist/v15/L0x4DF02iFML4hGCyMqgXS9sjlC0V7o.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/urbanist/v15/L0x-DF02iFML4hGCyMqrbS1miXK2Z7s.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/urbanist/v15/L0x-DF02iFML4hGCyMqlbS1miXK2.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
 
-/* everything selector */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* class selector */
-.signup-container {
-    max-width: 400px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* #id selector */
-#signup-form {
+  /* Not Important */
+  .content {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 80px;
+  }
+ /* Not Important */
+
+.section-wrapper {
+    /* background: linear-gradient(#363537, #7C7C7C); */
+    background-color: black;
+    font-family:  'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 120px;
+    overflow: hidden;
 }
 
-/* tag selector */
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+.title {
+    color: #fff;
+    font-size:140px;
+    font-weight: bold;
 }
 
-.input-group {
-    margin-bottom: 15px;
+.part {
+    display: flex;
+    flex-direction: row;
 }
 
-/* attribute selector */
-input[type="text"], 
-input[type="email"], 
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#part0 {
+    color: #0874DE;
 }
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
+
+.description {
+    color:#808080;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.hero-img{
+    height: 400px;
+    width: 600px;
+}
+
+.buttons > button {
+    color: #fff;
+    font-size: 18px;
+}
+
+#btn-login {
+    background-color: #0874DE;
     border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position:absolute;
+    right: 20px;
+    top:14px;
+    color: white;
+    font-size: 18px;
+}
+
+#btn-primary {
+    background-color: #0874DE;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#btn-primary:hover {
     cursor: pointer;
+}   
+
+#btn-secondary {
+    background-color: #262626;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
-/* child selector */
-.signup-container > p {
-    text-align: center;
-    font-size: 14px;
-}
-
-/* hover effect */
-a:hover {
-    text-decoration: underline;
-    color: #007BFF;
-}
-
-/* nth-child */
-.input-group:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-button:active {
-    background-color: #3e8e41;
-}
-
-/* :not pseudo-class */
-input:not([type="submit"]) {
-    background-color: #f9f9f9;
-}
-
-/* :is pseudo-class */
-:is(h1, h2, h3) {
-    color: #333;
-}
-
-/* :has pseudo-class */
-form:has(input[type="password"]) {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-}
+#btn-secondary:hover {
+    cursor: pointer;
+}   
