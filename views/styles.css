@@ -35,7 +35,7 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
-  /* Not Important */
+  /* EXTRA LEARN */
   .content {
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@
     min-height: 100vh;
     padding: 20px 80px;
   }
- /* Not Important */
+ /* EXTRA LEARN */
 
 .section-wrapper {
     /* background: linear-gradient(#363537, #7C7C7C); */
@@ -74,12 +74,24 @@
     color:#808080;
     font-size: 30px;
     margin-top: 40px;
+    width: 750px;
+    /* height: 50px;
+    overflow: scroll; */
 }
 
 .hero-img{
     height: 400px;
     width: 600px;
+    position: relative;
 }
+
+/* .hero-img1{
+    height: 400px;
+    width: 600px;
+    position: relative;
+    z-index: 1;
+    bottom: 200px;
+} */
 
 .buttons > button {
     color: #fff;
@@ -91,11 +103,21 @@
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
-    position:absolute;
-    right: 20px;
-    top:14px;
+    position: fixed;      /* Show the difference between relative, fixed and absolute */
+    right: 30px;
+    top:20px;
     color: white;
     font-size: 18px;
+    width: auto;
+    /* width: 150px; */
+    /* max-width: 50px; */
+}
+
+#btn-login:hover {
+    transform: scale(1.1);
+    /* transform: rotate(10deg);
+    transform: skew(10deg);
+    transform: translate(10px, 10px); */
 }
 
 #btn-primary {
@@ -106,9 +128,21 @@
     border-radius: 10px;
 }
 
-#btn-primary:hover {
-    cursor: pointer;
-}   
+/* Selection by Attribute */
+/* .buttons > button[lang='en']{
+    background-color: #0874DE;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}  
+.buttons > button:not([lang='en']){
+    background-color: #262626;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}   */
 
 #btn-secondary {
     background-color: #262626;
@@ -117,6 +151,19 @@
     margin: 10px;
     border-radius: 10px;
 }
+
+#btn-primary:hover {
+    cursor: pointer;
+}  
+
+#btn-primary:active {
+    cursor: progress;
+}  
+
+/* Using :is selector */
+/* #btn-primary:is(:hover, :active) {
+    cursor: progress;
+}   */
 
 #btn-secondary:hover {
     cursor: pointer;
