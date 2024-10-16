@@ -64,6 +64,14 @@ form {
   gap: 20px;
 }
 
+/* implementation using grids */
+/* need to comment form > .form-parent and form-parent > .form-elements*/
+/* form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+} */
+
 form > .form-parent {
   display: flex;
   flex-wrap: wrap;
@@ -122,4 +130,117 @@ form input{
   font-family: 'Urbanist', sans-serif;
   font-weight: 400;
   font-size: 16px;
+}
+
+
+@media screen and (max-width:450px){
+
+  body {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+
+  .form {
+    border: 1px dotted #D0CCD0;
+    border-radius: 16px;
+    margin-top: 20px;
+    background-color: #fff;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title p {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .inner-title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    margin-top: -40px;
+  }
+
+
+#title-border {
+  border-bottom: 8px solid #0874de60;
+  margin-top: -20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+form > .form-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-parent > .form-elements {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-elements label {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.form-elements input,
+.form-elements textarea {
+  padding: 8px;
+  border: 1px solid #D0CCD0;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #0874de;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 40%;
+}
+
+input[type="submit"]:hover {
+  background-color: #065bb5;
+}
+
+#form-concern {
+  display: flex;
+  flex-direction: column;
+}
+
+form input{
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#form-concern textarea {
+  border-radius: 20px;
+  padding: 20px;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 }
