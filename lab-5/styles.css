@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v15/L0x-DF02iFML4hGCyMqlbS1miXK2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.title {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.title p {
+  font-size: 40px;
+  color: #333;
+}
+
+.inner-title {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+#title-border {
+  width: 100%;
+  border-bottom: 8px solid #0874de60;
+  margin-top: -50px;
+}
+
+.form {
+  border: 1px dotted #D0CCD0;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.form-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form > .form-parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-parent > .form-elements {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-elements label {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.form-elements input,
+.form-elements textarea {
+  padding: 8px;
+  border: 1px solid #D0CCD0;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #0874de;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 10%;
+}
+
+input[type="submit"]:hover {
+  background-color: #065bb5;
+}
+
+#form-concern {
+  display: flex;
+  flex-direction: column;
+}
+
+form input{
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#form-concern textarea {
+  border-radius: 20px;
+  padding: 20px;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
