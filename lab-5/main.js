@@ -1,13 +1,16 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
-app.use(bodyParser.urlencoded({ extended: true }));
+const path = require('path');
+const port = 3001;
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.post('/submit_form', (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    res.send(`Form submitted successfully! Name: ${name}, Email: ${email}`);
+    console.log(req.params);
+    console.log(req.body);
 });
 
 app.listen(port, () => {

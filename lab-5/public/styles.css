@@ -37,10 +37,9 @@ body {
 }
 
 #title-border {
-  width: 100%;
-  border-bottom: 8px solid #0874de60;
+  border-bottom: 10px solid #0874de80;
   margin-top: -50px;
-}
+} 
 
 .form {
   border: 1px dotted #D0CCD0;
@@ -58,11 +57,6 @@ body {
   margin-bottom: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
 /* implementation using grids */
 /* need to comment form > .form-parent and form-parent > .form-elements*/
@@ -74,7 +68,7 @@ form {
 
 form > .form-parent {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 20px;
 }
 
@@ -84,21 +78,24 @@ form > .form-parent {
   flex-direction: column;
 }
 
-.form-elements label {
+ .form-elements label {
   margin-bottom: 8px;
   font-weight: 700;
 }
 
-.form-elements input,
-.form-elements textarea {
+#form-concern {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-elements input, textarea {
   padding: 8px;
   border: 1px solid #D0CCD0;
   border-radius: 8px;
   width: 100%;
-  box-sizing: border-box;
 }
 
-input[type="submit"] {
+/* input[type="submit"] {
   margin-top: 20px;
   padding: 10px;
   background-color: #0874de;
@@ -113,10 +110,6 @@ input[type="submit"]:hover {
   background-color: #065bb5;
 }
 
-#form-concern {
-  display: flex;
-  flex-direction: column;
-}
 
 form input{
   font-family: 'Urbanist', sans-serif;
@@ -130,7 +123,7 @@ form input{
   font-family: 'Urbanist', sans-serif;
   font-weight: 400;
   font-size: 16px;
-}
+} */
 
 
 @media screen and (max-width:450px){
